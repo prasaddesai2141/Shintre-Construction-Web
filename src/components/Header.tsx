@@ -7,7 +7,9 @@ const Header: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 80;
+      const top = element.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
       setIsMenuOpen(false);
     }
   };
@@ -16,10 +18,17 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-blue-600">Shintre Construction</h1>
+          <div
+            className="flex items-center cursor-pointer group"
+            onClick={() => scrollToSection('home')}
+          >
+            <img
+              src="/logo3.png"
+              alt="Shintre Construction Logo"
+              className="h-[52px] sm:h-[60px] w-auto object-contain transition-transform duration-300 scale-[1.35] sm:scale-[1.45] origin-left group-hover:scale-[1.4] sm:group-hover:scale-[1.5] drop-shadow-sm"
+            />
           </div>
-          
+
           <nav className="hidden md:flex space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 transition-colors">Home</button>
             <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-blue-600 transition-colors">About</button>
