@@ -205,6 +205,7 @@ const Services: React.FC = () => {
           {/* ── Main Interactive Panel ── */}
           <div
             ref={panelRef}
+            className="service-main-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: '300px 1fr',

@@ -225,6 +225,7 @@ const About: React.FC = () => {
 
           {/* Two-column: Photo | Story + Timeline */}
           <div
+            className="about-two-col"
             style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1.15fr',
@@ -394,6 +395,7 @@ const About: React.FC = () => {
           }}
         >
           <div
+            className="stats-grid"
             style={{
               maxWidth: '1280px',
               margin: '0 auto',
@@ -440,6 +442,7 @@ const About: React.FC = () => {
             </h3>
           </div>
           <div
+            className="why-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',

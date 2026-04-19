@@ -385,6 +385,7 @@ const Projects: React.FC = () => {
           {/* ── Cards Grid ── */}
           <div
             ref={sectionRef}
+            className="proj-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
