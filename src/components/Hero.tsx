@@ -178,6 +178,7 @@ const Hero: React.FC = () => {
 
             {/* ─── RIGHT: Two auto-scroll image columns ─── */}
             <div
+              className="hero-scroll-wrapper-container"
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',

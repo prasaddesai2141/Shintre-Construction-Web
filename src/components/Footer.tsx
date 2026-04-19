@@ -94,6 +94,7 @@ const Footer: React.FC = () => {
       >
         {/* ── Main grid ── */}
         <div
+          className="footer-grid"
           style={{
             maxWidth: '1280px',
             margin: '0 auto',
@@ -348,6 +349,20 @@ const Footer: React.FC = () => {
           </button>
         </div>
       </footer>
+
+      {/* Responsive styles */}
+      <style>{`
+        @media (max-width: 900px) {
+          .footer-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 560px) {
+          .footer-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </>
   );
 };
